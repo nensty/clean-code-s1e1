@@ -1,5 +1,5 @@
 /* Basic Style */
-body {
+.main {
   background-color: #f8f8f8;
   color: #333;
   font-family: Lato, sans-serif;
@@ -12,11 +12,11 @@ body {
   text-align: right;
 }
 
-.logo .logo__image {
+.logo__image {
   width: 100%;
 }
 
-.logo .logo__more-info {
+.logo__more-info {
   font-family: fantasy, cursive;
 }
 
@@ -45,17 +45,17 @@ body {
   justify-content: space-between;
 }
 
-ul {
+.tasks-block {
   margin: 0;
   padding: 0px;
 }
 
-li,
+.todo-list__task,
 .tasks-block__title {
   list-style: none;
 }
 
-.tasks-block__add-item-input,
+.todo-list__task-title-edit,
 .tasks-block__button {
   outline: none;
 }
@@ -86,7 +86,7 @@ li,
   text-transform: uppercase;
 }
 
-input[type="text"] {
+.todo-list__task-title-edit {
   margin: 0;
   font-size: 18px;
   line-height: 18px;
@@ -97,9 +97,11 @@ input[type="text"] {
   border-radius: 6px;
   font-family: Lato, sans-serif;
   color: #888;
+  width: 318px;
+  flex-grow: 1;
 }
 
-input[type="text"]:focus {
+.todo-list__task-title-edit:focus {
   color: #333;
 }
 
@@ -109,13 +111,8 @@ input[type="text"]:focus {
   margin: 0 0 20px;
 }
 
-.tasks-block__add-item-input {
-  width: 318px;
-  flex-grow: 1;
-}
-
 /* Task list */
-li {
+.todo-list__task {
   overflow: hidden;
   padding: 20px 0;
   border-bottom: 1px solid #eee;
@@ -125,11 +122,11 @@ li {
   align-items: center;
 }
 
-li > * {
+.todo-list__task > * {
   vertical-align: middle;
 }
 
-li > .todo-list__task-completion-control {
+.todo-list__task > .todo-list__task-completion-control {
   margin: 0 10px;
 }
 
@@ -140,36 +137,36 @@ li > .todo-list__task-completion-control {
   width: 226px;
 }
 
-li > input[type="text"] {
+.todo-list__task > .todo-list__task-title-edit {
   width: 226px;
 }
 
-.tasks-block__button_delete img {
+.tasks-block__button_delete-image {
   height: 2em;
   transform: rotateZ(45deg);
   transition: transform 200ms ease-in;
 }
 
-.tasks-block__button_delete img:hover {
+.tasks-block__button_delete-image:hover {
   transform: rotateZ(0);
 }
 
 /* Completed */
-.todo-list__completed-tasks label {
+.tasks-block-completed .todo-list__task-title-label {
   text-decoration: line-through;
   color: #888;
 }
 
 /* Edit Task */
-ul li input[type=text] {
+.todo-list__task .todo-list__task-title-edit {
   display: none;
 }
 
-.todo-list__task_editable input[type=text] {
+.todo-list__task_editable .todo-list__task-title-edit {
   display: inline-block;
   width: 224px;
 }
 
-.todo-list__task_editable label {
+.todo-list__task_editable .todo-list__task-title-label {
   display: none;
 }
