@@ -14,18 +14,18 @@
     <div class="tasks-block">
       <label class="tasks-block__add-item-label" for="new-task">Add Item</label>
       <span class="tasks-block__add-item-content">
-        <input id="new-task" class="todo-list__task-title-edit" type="text">
+        <input id="new-task" class="todo-list__task-title-edit">
         <button class="tasks-block__button">Add</button>
       </span>
     </div>
     <div class="tasks-block">
       <h3 class="tasks-block__title">Todo</h3>
-      <ul class="tasks-block tasks-block-to-complete" id="incompleteTasks">
+      <ul class="tasks-block tasks-block-to-complete">
         <li class="todo-list__task">
           <input class="todo-list__task-completion-control" type="checkbox">
           <div class="todo-list__task-title">
-            <label class="todo-list__task-title-label">Pay Bills</label>
-            <input type="text" class="todo-list__task-title-edit">
+            <input class="todo-list__task-title-edit" id="edit-task1">
+            <label class="todo-list__task-title-label" for="edit-task1">Pay Bills</label>
           </div>
           <button class="tasks-block__button tasks-block__button_edit">Edit</button>
           <button class="tasks-block__button tasks-block__button_delete">
@@ -35,8 +35,8 @@
         <li class="todo-list__task todo-list__task_editable">
           <input class="todo-list__task-completion-control" type="checkbox">
           <div class="todo-list__task-title">
-            <label class="todo-list__task-title-label">Go Shopping</label>
-            <input type="text" value="Go Shopping" class="todo-list__task-title-edit">
+            <input value="Go Shopping" class="todo-list__task-title-edit" id="edit-task2">
+            <label class="todo-list__task-title-label" for="edit-task2">Go Shopping</label>
           </div>
           <button class="tasks-block__button tasks-block__button_edit">Save</button>
           <button class="tasks-block__button tasks-block__button_delete">
@@ -51,8 +51,8 @@
         <li class="todo-list__task">
           <input class="todo-list__task-completion-control" type="checkbox" checked>
           <div class="todo-list__task-title">
-            <label class="todo-list__task-title-label">See the Doctor</label>
-            <input type="text" class="todo-list__task-title-edit">
+            <input class="todo-list__task-title-edit" id="edit-task3">
+            <label class="todo-list__task-title-label" for="edit-task3">See the Doctor</label>
           </div>
           <button class="tasks-block__button tasks-block__button_edit">Edit</button>
           <button class="tasks-block__button tasks-block__button_delete">

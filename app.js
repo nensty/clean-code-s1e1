@@ -92,8 +92,8 @@ var editTask=function(){
 
     var listItem=this.parentNode;
 
-    var editInput=listItem.querySelector('input[type=text]');
-    var label=listItem.querySelector("label");
+    var editInput=listItem.querySelector('.todo-list__task-title-edit');
+    var label=listItem.querySelector(".todo-list__task-title-label");
     var editBtn=listItem.querySelector(".tasks-block__button_edit");
     var containsClass=listItem.classList.contains("todo-list__task_editable");
     //If class of the parent is .editmode

@@ -1,22 +1,19 @@
 /* Basic Style */
+:root {
+  --main-color: #333;
+  --secondary-color: #888;
+}
+
 .main {
   background-color: #f8f8f8;
-  color: #333;
+  color: var(--main-color);
   font-family: Lato, sans-serif;
 }
 
 .logo {
   width: 500px;
   margin: 0 auto;
-  display: block;
   text-align: right;
-}
-
-.logo__image {
-  width: 100%;
-}
-
-.logo__more-info {
   font-family: fantasy, cursive;
 }
 
@@ -28,26 +25,27 @@
 
 }
 
+.logo__image {
+  width: 100%;
+}
+
 .todo-list {
-  display: block;
   width: 500px;
-  margin: 0 auto 0;
+  margin: 0 auto;
 }
 
 .todo-list__task-title {
-  width: 56%;
   display: inline-block;
   flex-grow: 1;
 }
 
 .tasks-block__add-item-content {
   display: flex;
-  justify-content: space-between;
 }
 
 .tasks-block {
   margin: 0;
-  padding: 0px;
+  padding: 0;
 }
 
 .todo-list__task,
@@ -62,11 +60,10 @@
 
 .tasks-block__button {
   background: none;
-  border: 0px;
-  color: #888;
+  border: 0;
+  color: var(--secondary-color);
   font-size: 15px;
   width: 60px;
-  font-family: Lato, sans-serif;
   cursor: pointer;
 }
 
@@ -77,10 +74,10 @@
 /* Heading */
 .tasks-block__title,
 .tasks-block__add-item-label {
-  color: #333;
+  color: var(--main-color);
   font-weight: 700;
   font-size: 15px;
-  border-bottom: 2px solid #333;
+  border-bottom: 2px solid var(--main-color);
   padding: 30px 0 10px;
   margin: 0;
   text-transform: uppercase;
@@ -90,25 +87,21 @@
   margin: 0;
   font-size: 18px;
   line-height: 18px;
-  height: 21px;
   padding: 0 9px;
   border: 1px solid #ddd;
-  background: #fff;
   border-radius: 6px;
-  font-family: Lato, sans-serif;
-  color: #888;
-  width: 318px;
+  color: var(--secondary-color);
   flex-grow: 1;
 }
 
 .todo-list__task-title-edit:focus {
-  color: #333;
+  color: var(--main-color);
 }
 
 /* New Task */
 .tasks-block__add-item-label {
   display: block;
-  margin: 0 0 20px;
+  margin-bottom: 20px;
 }
 
 /* Task list */
@@ -122,23 +115,13 @@
   align-items: center;
 }
 
-.todo-list__task > * {
-  vertical-align: middle;
-}
-
-.todo-list__task > .todo-list__task-completion-control {
+.todo-list__task-completion-control {
   margin: 0 10px;
 }
 
 .todo-list__task-title-label {
   padding-left: 10px;
-  box-sizing: border-box;
   font-size: 18px;
-  width: 226px;
-}
-
-.todo-list__task > .todo-list__task-title-edit {
-  width: 226px;
 }
 
 .tasks-block__button_delete-image {
@@ -154,19 +137,17 @@
 /* Completed */
 .tasks-block-completed .todo-list__task-title-label {
   text-decoration: line-through;
-  color: #888;
+  color: var(--secondary-color);
 }
 
 /* Edit Task */
-.todo-list__task .todo-list__task-title-edit {
+.todo-list__task .todo-list__task-title-edit,
+.todo-list__task_editable .todo-list__task-title-label {
   display: none;
+  width: 226px;
 }
 
 .todo-list__task_editable .todo-list__task-title-edit {
   display: inline-block;
-  width: 224px;
-}
-
-.todo-list__task_editable .todo-list__task-title-label {
-  display: none;
+  width: 226px;
 }
